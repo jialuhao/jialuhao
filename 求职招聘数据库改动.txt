@@ -1,0 +1,1 @@
+12-06 personal—resume表中字段dikind长度改为4
