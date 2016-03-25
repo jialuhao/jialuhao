@@ -1,0 +1,13 @@
+/* #kfxlbox.css */
+
+#kfxlbox {
+	width:201px;
+	border:1px #D6D6D6 solid;
+	margin:100px 0 0 0;
+}
+#kfxlbox h2 {
+	line-height:31px;
+	background:url(images/kffwBj_2.jpg) no-repeat 0 0;
+	padding:0 0 0 21px;
+	color:#BC0402;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="BdFunction"
+		table="bd_function"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="Name"
+			column="name"
+			type="string"
+			not-null="true"
+			length="10"
+		/>
+	
+
+		<set name="RoleFunctions" inverse="true">
+			<key column="id"/>
+			<one-to-many class="RoleFunction"/>
+		</set>
+
+
+	</class>	
+</hibernate-mapping>

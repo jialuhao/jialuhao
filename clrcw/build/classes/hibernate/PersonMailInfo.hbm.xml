@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="PersonMailInfo"
+		table="person_mail_info"
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="UserLoginId"
+			column="user_login_id"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Version"
+			column="version"
+			type="java.lang.Short"
+			not-null="false"
+			length="5"
+		/>
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<property
+			name="Datetime"
+			column="datetime"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<many-to-one
+			name="CompJob"
+			column="comp_job_id"
+			class="PublishJobInfo"
+			not-null="true"
+		>
+		</many-to-one>
+
+
+	</class>	
+</hibernate-mapping>

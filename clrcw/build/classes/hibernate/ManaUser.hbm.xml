@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="ManaUser"
+		table="mana_user"
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<version name="Version" column="version" type="short"/>
+		
+		<property
+			name="Account"
+			column="account"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Password"
+			column="password"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+
+		<set inverse="true" name="UserRoles">
+			<key column="id" />
+			<one-to-many class="UserRole" />
+		</set>
+
+
+
+	</class>	
+</hibernate-mapping>

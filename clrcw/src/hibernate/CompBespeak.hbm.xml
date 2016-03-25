@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="CompBespeak"
+		table="comp_bespeak"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<version name="Version" column="version" type="short"/>
+		
+		<property
+			name="UserId"
+			column="user_id"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		
+		
+		
+		<property
+			name="Password"
+			column="password"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="CompName"
+			column="comp_name"
+			type="string"
+			not-null="true"
+			length="50"
+		/>
+		<property
+			name="CompAddr"
+			column="comp_addr"
+			type="string"
+			not-null="true"
+			length="50"
+		/>
+		<property
+			name="MailPost"
+			column="mail_post"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Telephone"
+			column="telephone"
+			type="string"
+			not-null="true"
+			length="15"
+		/>
+		<property
+			name="Linkman"
+			column="linkman"
+			type="string"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="Mail"
+			column="mail"
+			type="string"
+			not-null="true"
+			length="30"
+		/>
+		<property
+			name="CompStatus"
+			column="comp_status"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<property
+			name="opinion"
+			column="opinion"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+		
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+	<property
+			name="compnum"
+			column="compnum"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="comparea"
+			column="comparea"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="aglientcode"
+			column="aglientcode"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="cardnum"
+			column="cardnum"
+			type="string"
+			not-null="false"
+			length="36"
+		/>
+		<property
+			name="companyplace"
+			column="companyplace"
+			type="string"
+			not-null="false"
+			length="36"
+		/>
+		<property
+			name="pv"
+			column="pv"
+			type="integer"
+			not-null="false"
+		/>
+		<property
+			name="fkcompanyimage"
+			column="fkcompanyimage"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<set name="CompInfos" inverse="true">
+			<key column="id"/>
+			<one-to-many class="CompInfo"/>
+		</set>
+
+
+	</class>	
+</hibernate-mapping>

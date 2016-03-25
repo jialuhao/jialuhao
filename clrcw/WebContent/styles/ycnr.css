@@ -1,0 +1,13 @@
+/* 
+内容:文字列表02模板样式
+作者: lqx66
+创建时间:2011.10.19
+ */
+div#main{width:951px; padding:7px 0 6px 9px;}
+#leftsidebar{ height:auto;}
+#content{width:686px; float:left; display:inline; margin-left:9px;}
+#content #breadcrumbnav{width:669px;}
+#content #lmbox{width:684px; float:left; border:1px #d3d3d3 solid; border-top:1px solid #C71A20; margin-top:5px; padding-bottom:40px;}
+#articlecontent{width:572px; padding:0 56px 0 56px; font-size:14px; text-align:center;}
+#articlecontent img{width:354px; height:247px; display:block; margin:0 auto; padding-top:34px;}
+#articlecontent p{ line-height:24px; margin-top:34px; text-indent:28px; text-align:left;}

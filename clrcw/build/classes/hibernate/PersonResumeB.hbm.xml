@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="PersonResumeB"
+		table="person_resume_b"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<version name="Version" column="version" type="short"/>
+		
+		<property
+			name="UserLoginId"
+			column="user_login_id"
+			type="string"
+			not-null="true"
+			length="20"
+		/>
+		<property
+			name="StartTime"
+			column="start_time"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="EndTime"
+			column="end_time"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="WorkUnit"
+			column="work_unit"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="Job"
+			column="job"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="WorkContent"
+			column="work_content"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+		
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<many-to-one
+			name="Resume"
+			column="resume_id"
+			class="PersonResume"
+			not-null="true"
+		>
+		</many-to-one>
+
+
+	</class>	
+</hibernate-mapping>

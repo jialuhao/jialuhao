@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+		"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ModifyPasswordForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="userId" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+			<form-property name="newPassword" type="java.lang.String"></form-property>
+		</form-bean>
+
+		<form-bean name="ManaLoginForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="account" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="EducateManagerForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="eduCode" type="java.lang.String"></form-property>
+			<form-property name="eduName" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<!-- commoncode -->
+		<form-bean name="CommoncodeManagerForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="commonvalues" type="java.lang.String"></form-property>
+			<form-property name="code" type="java.lang.String"></form-property>
+			<form-property name="commontype" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="AreacodeManagerForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="areacode" type="java.lang.String"></form-property>
+			<form-property name="areaname" type="java.lang.String"></form-property>
+
+		</form-bean>
+
+
+
+		<form-bean name="CompkindManagerForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="kindCode" type="java.lang.String"></form-property>
+			<form-property name="kindName" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="CompTradeManagerForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="tradeCode" type="java.lang.String"></form-property>
+			<form-property name="tradeName" type="java.lang.String"></form-property>
+
+		</form-bean>
+
+		<form-bean name="ShowPostForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+		</form-bean>
+		<form-bean name="AddPostForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="postcode" type="java.lang.String"></form-property>
+			<form-property name="postname" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="ShowJobForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+
+		</form-bean>
+		<form-bean name="AddJobForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="jobcode" type="java.lang.String"></form-property>
+			<form-property name="jobname" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="FindAllUserIdForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="pnum" type="java.lang.String"></form-property>
+
+		</form-bean>
+
+		<form-bean name="FindPublishJobForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="jobpnum" type="java.lang.String"></form-property>
+
+		</form-bean>
+
+		<form-bean name="FindApplyJobForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="apppnum" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="AglientapplyForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="apppnum" type="java.lang.String"></form-property>
+              <form-property name="id" type="java.lang.String"></form-property>
+			<form-property name="truename" type="java.lang.String"></form-property>
+			<form-property name="sex" type="java.lang.String"></form-property>
+			<form-property name="birthday" type="java.lang.String"></form-property>
+			<form-property name="province" type="java.lang.String"></form-property>
+			<form-property name="nowadd" type="java.lang.String"></form-property>
+			<form-property name="postcode" type="java.lang.String"></form-property>
+			<form-property name="telnum" type="java.lang.String"></form-property>
+			<form-property name="education" type="java.lang.String"></form-property>
+			<form-property name="school" type="java.lang.String"></form-property>
+			<form-property name="speciality" type="java.lang.String"></form-property>
+			<form-property name="years" type="java.lang.String"></form-property>
+			<form-property name="level" type="java.lang.String"></form-property>
+			<form-property name="language" type="java.lang.String"></form-property>
+			<form-property name="languagelevel"
+				type="java.lang.String">
+			</form-property>
+			<form-property name="language2" type="java.lang.String"></form-property>
+			<form-property name="languagelevel2"
+				type="java.lang.String">
+			</form-property>
+					<form-property name="uploadphoto" type="org.apache.struts.upload.FormFile"></form-property>
+		<form-property name="pageIndex" type="java.lang.String"></form-property>
+		</form-bean>
+
+		<form-bean name="SHPublishJobForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+			<form-property name="jobpnum" type="java.lang.String"></form-property>
+		</form-bean>
+
+		<form-bean name="SHApplyJobForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+			<form-property name="apppnum" type="java.lang.String"></form-property>
+			<form-property name="shapp" type="java.lang.String"></form-property>
+		</form-bean>
+
+		<form-bean name="DelUserForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+			<form-property name="pnum" type="java.lang.String"></form-property>
+			<form-property name="newPassword" type="java.lang.String"></form-property>
+			<form-property name="newPassword2" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="DelPostForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="DelJobForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="ShowAdminForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+
+		</form-bean>
+		<form-bean name="DelManaUserForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="loginName" type="java.lang.String"></form-property>
+			<form-property name="pass" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="AddAdminForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+		</form-bean>
+		<form-bean name="AddPostRootForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="postRootname" type="java.lang.String">
+			</form-property>
+		</form-bean>
+		<form-bean name="ShowPostRootForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+		</form-bean>
+		<form-bean name="DelPostRootForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="delId" type="java.lang.String"></form-property>
+
+		</form-bean>
+		<form-bean name="aglientpublishForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="compName" type="java.lang.String"></form-property>
+			<form-property name="compAddr" type="java.lang.String"></form-property>
+			<form-property name="mailPost" type="java.lang.String"></form-property>
+			<form-property name="telephone" type="java.lang.String"></form-property>
+			<form-property name="linkman" type="java.lang.String"></form-property>
+			<form-property name="mail" type="java.lang.String"></form-property>
+			<form-property name="comparea" type="java.lang.String"></form-property>
+			<form-property name="compnum" type="java.lang.String"></form-property>
+			<form-property name="cardnum" type="java.lang.String"></form-property>
+			<form-property name="uploadphoto1" type="org.apache.struts.upload.FormFile"></form-property>
+			<form-property name="uploadphoto2" type="org.apache.struts.upload.FormFile"></form-property>	   	
+			<form-property name="compaddr" type="java.lang.String"></form-property>	
+			<form-property name="workScrope" type="java.lang.String"></form-property>
+			<form-property name="netAddress" type="java.lang.String"></form-property>
+			<form-property name="compIntro" type="java.lang.String"></form-property>
+			<form-property name="type" type="java.lang.String"></form-property>
+			<form-property name="bd" type="java.lang.String"></form-property>
+			<form-property name="fax" type="java.lang.String"></form-property>
+			<form-property name="compcount" type="java.lang.String"></form-property>
+			<form-property name="jobId" type="java.lang.String"></form-property>
+			<form-property name="postId" type="java.lang.String"></form-property>
+			<form-property name="num" type="java.lang.String"></form-property>
+			<form-property name="intro" type="java.lang.String"></form-property>
+			<form-property name="sTime" type="java.lang.String"></form-property>
+			<form-property name="eTime" type="java.lang.String"></form-property>
+			<form-property name="sex" type="java.lang.String"></form-property>
+			<form-property name="age" type="java.lang.String"></form-property>
+			<form-property name="status" type="java.lang.String"></form-property>
+			<form-property name="education" type="java.lang.String"></form-property>
+			<form-property name="experience" type="java.lang.String"></form-property>
+			<form-property name="money" type="java.lang.String"></form-property>
+			<form-property name="infoKeyId" type="java.lang.String"></form-property>
+			<form-property name="userName" type="java.lang.String"></form-property>
+			<form-property name="nature" type="java.lang.String"></form-property>
+			<form-property name="workarea" type="java.lang.String"></form-property>
+			<form-property name="welfare" type="java.lang.String"></form-property>
+			<form-property name="grading" type="java.lang.String"></form-property>
+			<form-property name="companyplace" type="java.lang.String"></form-property>
+		</form-bean>
+	</form-beans>
+
+
+	<!-- 系统全局异常 -->
+	<global-exceptions>
+		<exception key="error.inform" path="../public/common/error.jsp"
+			type="common.exception.BaseException" />
+		<exception key="error.DB" path="../public/common/error.jsp"
+			type="common.exception.BusinessException" />
+		<exception key="error.inform" path="../public/common/error.jsp"
+			type="java.lang.Exception" />
+	</global-exceptions>
+	<!-- 系统全局 -->
+	<global-forwards>
+		<forward name="manaLogin" path="../pages/admin/reLogin.jsp"
+			redirect="true" />
+		<forward name="error" path="../public/common/error.jsp"
+			redirect="true" />
+			<forward name="checkmessage" path="../pages/admin/top.jsp"
+			redirect="true" />
+	</global-forwards>
+
+
+
+	<action-mappings>
+
+
+		<action path="/manaLogin" name="ManaLoginForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="false" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/frameset.jsp"
+				redirect="true" />
+			<forward name="successacre" path="../pages/admin/framesetarea.jsp"
+				redirect="true" />
+			<forward name="fail" path="../pages/admin/manaLogin.jsp"
+				redirect="true" />
+		</action>
+		<action path="/modifyPassword" name="ModifyPasswordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="false" input="/pages/admin/modifyPassword.jsp" parameter="method">
+			<forward name="success" path="/../pages/admin/modifyPassword.jsp" />
+		</action>
+		<action path="/educateManage" name="EducateManagerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="true" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/educateManage.jsp"
+				redirect="true" />
+			<forward name="show" path="/educateManage.do?method=show" />
+		</action>
+		<!-- commoncode-->
+		<action path="/commoncodemanage" name="CommoncodeManagerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="true" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/commoncodemanage.jsp"
+				redirect="true" />
+			<forward name="show" path="/commoncodemanage.do?method=show" />
+		</action>
+		<action path="/commoncodemanage1" name="CommoncodeManagerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="true" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/commoncodemanage1.jsp"
+				redirect="true" />
+			<forward name="show" path="/commoncodemanage1.do?method=show" />
+		</action>
+		<!-- areacode-->
+		<action path="/areacodemanage" name="AreacodeManagerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="true" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/areacodemanage.jsp"
+				redirect="true" />
+			<forward name="show" path="/areacodemanage.do?method=show" />
+		</action>
+		<!-- salary-->
+		<action path="/salarymanage" name="AreacodeManagerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="true" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/salarymanage.jsp"
+				redirect="true" />
+			<forward name="show" path="/salarymanage.do?method=show" />
+		</action>
+		
+		<action path="/compkindManage" name="CompkindManagerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="true" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/compkindManage.jsp"
+				redirect="true" />
+			<forward name="show" path="/compkindManage.do?method=show" />
+		</action>
+		<action path="/compTradeManage" name="CompTradeManagerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="true" input="/pages/admin/manaLogin.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/tradeManage.jsp"
+				redirect="true" />
+			<forward name="show" path="/compTradeManage.do?method=show" />
+		</action>
+
+		<action path="/nextShowAllBespeak"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="false" input="/pages/admin/manaLogin.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/showAllBespeak.jsp"
+				redirect="true" />
+			<forward name="manaBespeak" path="../pages/admin/manaBespeak.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+			<forward name="showmessage" path="/showAllBespeak.do?method=showAllBespeak" redirect="true"/>
+			<forward name="show" path="../pages/admin/compstatus.jsp" redirect="true"/>
+		</action>
+		<action path="/showAllBespeak"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="false" input="/pages/admin/manaLogin.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/showAllBespeak.jsp"
+				redirect="true" />
+			<forward name="manaBespeak" path="../pages/admin/manaBespeak.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+			<forward name="showmessage" path="/showAllBespeak.do?method=showAllBespeak" redirect="true"/>
+			<forward name="show" path="../pages/admin/compstatus.jsp" redirect="true"/>
+			<forward name="modify" path="../pages/admin/modifycompanyPassword.jsp" redirect="true"/>
+		</action>
+		<action path="/showAllCompany"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="false" input="/pages/admin/manaLogin.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/showAllCompany.jsp"
+				redirect="true" />
+			<forward name="manaCompany" path="../pages/admin/manaCompany.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+			<forward name="show" path="/showAllCompany.do?method=showAllCompany" />
+		</action>
+		<action path="/listAllCompany"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			validate="false" input="/pages/admin/manaLogin.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/listAllCompany.jsp"
+				redirect="true" />
+			<forward name="manaCompany" path="../pages/admin/oneCompany.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+			<forward name="show" path="/showAllCompany.do?method=showAllCompany" />
+		</action>
+
+
+
+
+		<action path="/showPost" name="ShowPostForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/postManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/addPost" name="AddPostForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postManage.jsp" parameter="method">
+
+			<forward name="success" path="/showPost.do?method=showPost"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/delPost" name="DelPostForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postManage.jsp" parameter="method">
+
+			<forward name="success" path="/showPost.do?method=showPost"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/showJob" name="ShowJobForm" validate="false"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/jobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/jobManage.jsp"
+				redirect="true" />
+			<forward name="zhiye" path="../zhiye.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/addJob" name="AddJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/jobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/jobManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/delJob" name="DelJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/jobManage.jsp" parameter="method">
+
+			<forward name="success" path="/showJob.do?method=showJob"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/findAllUserId" name="FindAllUserIdForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/personManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/personManage.jsp"
+				redirect="true" />
+			<forward name="showall" path="../pages/admin/personAllManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/findAllpublishJob" name="FindPublishJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/publishJobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/publishJobManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+				
+				<forward name="showservice" path="../pages/admin/serviceJobManage.jsp"
+				redirect="true" />
+				<forward name="checkservice" path="../pages/admin/checkservice.jsp"
+				redirect="true" />
+				<forward name="checkoneservice" path="../pages/admin/checkoneservice.jsp"
+				redirect="true" />
+				<forward name="addservice" path="../pages/admin/ServicelogShow.jsp"
+				redirect="true" />
+				<forward name="modifyservice" path="../pages/admin/modifyoneservice.jsp"
+				redirect="true" />
+				<forward name="lookservice" path="/findAllpublishJob.do?method=checkserviceJob"
+				redirect="true" />
+		</action>
+
+		<action path="/findAllapplyJob" name="FindApplyJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/applyJobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/applyJobManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+				<forward name="resumeView" path="../pages/admin/resumeViewmanager.jsp"
+				redirect="true" />
+		</action>
+		<action path="/SHPublishJob" name="SHPublishJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/publishJobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/publishjobstatus.jsp"
+				redirect="true" />
+			<forward name="successupdate" path="../pages/admin/publishJobManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+				<forward name="savePJob" path="/findAllpublishJob.do?method=findAllpublishJob"
+				redirect="true" />
+		</action>
+
+		<action path="/SHApplyJob" name="SHApplyJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/applyJobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/applyjobstatus.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+				<forward name="bathUpdateAJob" path="/findAllapplyJob.do?method=findApplyJob"
+				redirect="true" />
+				<forward name="updateperson" path="../pages/admin/applyJobManage.jsp"
+				redirect="true" />
+		</action>
+
+		<action path="/nextfindAllUserId" name="FindAllUserIdForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/personManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/personManage.jsp"
+				redirect="true" />
+			<forward name="showall" path="../pages/admin/personAllManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+
+
+		<action path="/nextfindpublish" name="FindPublishJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/publishJobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/publishJobManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+
+
+
+		<action path="/nextfindapp" name="FindApplyJobForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/applyJobManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/applyJobManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+
+		<action path="/bathDelUser" name="DelUserForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/personManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/personManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+
+
+		<action path="/delUser" name="DelUserForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/personManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/personManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+				<forward name="modify" path="../pages/admin/modifyuserPassword.jsp"
+				redirect="true" />
+		</action>
+		<action path="/delAdmin" name="DelManaUserForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/adminManage.jsp" parameter="method">
+
+			<forward name="success" path="/showAdmin.do?method=showAdmin"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/addAdmin" name="AddAdminForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/adminManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/adminManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+			<forward name="nouser" path="/showAdmin.do?method=showAdmin"
+				redirect="true" />
+		</action>
+		<action path="/showAdmin" name="ShowAdminForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/adminManage.jsp" parameter="method">
+
+			<forward name="success" path="../pages/admin/adminManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/addPostRoot" name="AddPostRootForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postRootManage.jsp" parameter="method">
+			<forward name="success" path="/showPostRoot.do?method=showPostRoot"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/showPostRoot" name="ShowPostRootForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postRootManage.jsp" parameter="method">
+			<forward name="success" path="../pages/admin/postRootManage.jsp"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+		<action path="/delPostRoot" name="DelPostRootForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postRootManage.jsp" parameter="method">
+			<forward name="success" path="/showPostRoot.do?method=showPostRoot"
+				redirect="true" />
+			<forward name="fail" path="../public/common/error.jsp"
+				redirect="true" />
+		</action>
+
+         <action path="/aglientapply" name="AglientapplyForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postRootManage.jsp" parameter="method">
+			<forward name="aglient" path="../pages/admin/aglientapply.jsp"
+				redirect="true" />
+		   <forward name="goOnRegist" path="../pages/admin/goonregist.jsp"
+				redirect="true" />
+		<forward name="return" path="../pages/admin/editResume.jsp" redirect="true" />
+		 <forward name="personRegist2" path="/aglientapply.do?method=personRegist3 "
+				redirect="true" />
+				 <forward name="personRegist3" path="../pages/admin/personRegist3.jsp "
+				redirect="true" />
+				 <forward name="personRegist8" path="../pages/admin/personRegist8.jsp "
+				redirect="true" />
+				<forward name="personRegist8-1" path="/aglientapply.do?method=personRegist8 "
+				redirect="true" />
+	             <forward name="fail" path="/public/common/error.jsp" redirect="true"/> 
+	             <forward name="toupdate" path="../pages/admin/editEducation.jsp" redirect="true"/>
+	           <forward name="personRegist4" path="../pages/admin/personRegist4.jsp "
+				redirect="true" />
+				<forward name="personRegist4-1" path="/aglientapply.do?method=personRegist4"
+				redirect="true" />
+				<forward name="showResume" path="../pages/admin/edit.jsp"
+				redirect="true" />
+		         <forward name="personRegist5" path="../pages/admin/personRegist5.jsp"
+				redirect="true" />
+				 <forward name="saveIntro" path="../pages/admin/personRegist5.jsp"
+				redirect="true" />
+				<forward name="personApplyList" path="../pages/admin/personRegist6.jsp"
+				redirect="true" />
+				<forward name="personRegist6" path="/aglientapply.do?method=personApplyList"
+				redirect="true" />
+				<forward name="showOneApplyJob" path="../pages/admin/applyJobEdit.jsp"
+				redirect="true" />
+		         <forward name="applyJobEdit" path="/aglientapply.do?method=personApplyList"
+				redirect="true" />
+		         <forward name="checkaglient" path="/aglientapply.do?method=personRegist3"
+				redirect="true" />
+				   <forward name="resumeView" path="../pages/admin/resumeView.jsp"
+				redirect="true" />
+		        <forward name="showAll" path="../pages/admin/personRegist9.jsp"
+				redirect="true" />
+				<forward name="personRegist7" path="../pages/admin/personRegist7.jsp"
+				redirect="true" />
+				<forward name="post" path="/aglientapply.do?method=showAll"
+				redirect="true" />
+				<forward name="deleteaglient" path="/aglientapply.do?method=aglientapply"
+				redirect="true" />
+		</action>
+          <action path="/aglientpublish" name="aglientpublishForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" scope="request"
+			input="/pages/admin/postRootManage.jsp" parameter="method">
+			<forward name="aglientpublish" path="../pages/admin/aglientpublish.jsp"
+				redirect="true" />
+			<forward name="companyjsp" path="../pages/admin/companyRegist1.jsp"
+				redirect="true" />
+			<forward name="companyRegist1" path="../pages/admin/companyRegist2.jsp"
+				redirect="true" />
+			<forward name="failed" path="../pages/admin/companyRegist1.jsp"
+				redirect="true" />
+		   <forward name="companyRegist2" path="/aglientpublish.do?method=companyShowInfo"
+				redirect="true" />
+		   <forward name="show" path="../pages/admin/companyShowInfo.jsp"
+				redirect="true" />
+			<forward name="update" path="/aglientpublish.do?method=companyShowInfo"
+				redirect="true" />
+		    <forward name="showPubJob" path="../pages/admin/companyPubJob.jsp"
+				redirect="true" />
+			<forward name="showInfo"
+				path="/aglientpublish.do?method=showPubJob" redirect="true" />
+				 <forward name="updatemessage" path="../pages/admin/companyUpJob.jsp"
+				redirect="true" />
+				<forward name="showServicelog"
+				path="../pages/admin/companyServicelog.jsp" redirect="true"/>
+				<forward name="showservice"
+				path="../pages/admin/companyServiceoneShow.jsp" redirect="true"/>
+				<forward name="showAll"
+				path="../pages/admin/companyAbilityPerson.jsp" redirect="true"/>
+				<forward name="showCompResume"
+				path="../pages/admin/companyQueryNotContact.jsp" redirect="true"/>
+				<forward name="OneResume"
+				path="/aglientpublish.do?method=showCompResume" redirect="true"/>
+				<forward name="show11"
+				path="../pages/admin/companyQueryOneResume.jsp" redirect="true"/>
+				<forward name="showPersonInfo"
+				path="../pages/admin/companyShowPersonInfo.jsp" redirect="true"/>
+				<forward name="join"
+				path="/aglientpublish.do?method=showAll" redirect="true"/>
+				<forward name="showqueryCompResume"
+				path="../pages/admin/companyQueryContact.jsp" redirect="true"/>
+				<forward name="OnequeryResume"
+				path="/aglientpublish.do?method=showqueryCompResume" redirect="true"/>
+				<forward name="showCompAbility"
+				path="../pages/admin/companyAbility.jsp" redirect="true"/>
+				<forward name="OneabResume"
+				path="/aglientpublish.do?method=showCompAbility" redirect="true"/>
+				<forward name="showOneabResume"
+				path="../pages/admin/companyAbilityResume.jsp" redirect="true"/>
+				<forward name="delaglient"
+				path="/aglientpublish.do?method=aglientpublish" redirect="true"/>
+		     </action>
+    
+	</action-mappings>
+
+	<!-- 加载国际化资源文件 -->
+	<message-resources parameter="i18n/messages" null="false" />
+
+	<!-- 装载验证的资源文件 -->
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validator.xml" />
+	</plug-in>
+	<!-- 装载spring配置文件，随应用启动创建applicationContext实例 -->
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="classpath*:spring/kgwContext.xml,
+			 classpath*:spring/action-servlet.xml,
+			 classpath*:spring/dao-context.xml" />
+	</plug-in>
+</struts-config>
+

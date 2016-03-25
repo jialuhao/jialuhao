@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="CompImage"
+		table="comp_image"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="pk_image"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="CompImage"
+			column="comp_image"
+			type="binary"
+			not-null="false"
+		/>
+		<property
+			name="Version"
+			column="version"
+			type="java.lang.Short"
+			not-null="false"
+			length="5"
+		/>
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+	
+
+
+	</class>	
+</hibernate-mapping>

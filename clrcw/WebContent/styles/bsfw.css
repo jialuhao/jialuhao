@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+}
+div, table, th, td, tr, a, em, span, h1, h2, h3, h4, h5, h6, ul, li, ol, form, caption, img, p {
+	margin:0;
+	padding:0;
+	border:0;
+}
+ul li, ol li {
+	list-style-type:none;
+}
+a:link {
+	color:#000;
+	text-decoration:none;
+}
+a:visited {
+	color:#000;
+	text-decoration:none;
+}
+a:hover {
+	color:#be0404;
+	text-decoration:none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:12px;
+}
+body {
+	font-family:"宋体";
+	font-size:12px;
+	line-height:18px;
+	color:#000;
+	text-align:center;
+	zoom:1;
+	overflow:visible;
+}
+img {
+	border:none;
+}
+/*清除浮动*/
+.clearfix:after{ visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
+.fl{ float:left;}
+.fr{ float:right;}
+
+
+/*=================残疾证查询===============*/
+.bsfw {
+	width:716px;
+	height:240px;
+	margin-top:5px;
+	border: 1px #D3D3D3 solid;
+}
+.bsfw .title{background:url(../../images/llboa/905.gif) repeat-x;}
+.bsfw h3 {
+	background:url(../../images/llboa/horn.png) no-repeat 3px 2px;
+	padding: 7px 0px 6px 22px;
+	color: #be0403;
+	font-size: 14px;
+	text-align:left;
+}
+.bsfw_cont {
+	height:200px;
+	margin:5px 4px;
+}
+.cjzwrap {
+	float:left;
+	width:245px;
+	height:201px;
+}
+.cjz{
+	padding:38px 0px 5px 10px;/* New 2014-05-04 */
+	width:235px;
+	background:url(../../images/llboa/cjz_bg.png) no-repeat left top;}
+.cjz ul{ overflow:hidden;}
+.cjz ul li {
+	height:26px;
+	line-height:26px;
+	padding-bottom:7px;
+	float:left;
+}
+.cjz ul li label {
+	display:inline-block;
+	height:26px;
+	width:59px;
+	float:left;
+	color:#555;
+	font-weight:bold;	
+}
+.cjz ul li input {
+	width:145px;
+	height:26px;
+	line-height:26px;
+	float:left;
+	border:none;
+	background:none;
+}
+.cjz ul li input.yz_num{ width:96px;}
+.cjz ul li span{ display:inline-block;float:left; margin-top:2px; margin-left:2px;}
+
+.bsfw_select {
+	width:155px;
+	height:31px;
+	color:#555555;
+	cursor:pointer;
+	border:none;
+	background:url(../../images/llboa/select_btn.png) no-repeat;
+	text-indent:9999px;
+	margin-left:38px;
+	float:left;
+}
+.bsfw_select:hover{
+	filter:alpha(opacity=90); /*IE滤镜，透明度90%*/
+	-moz-opacity:0.9; /*Firefox私有，透明度90%*/
+	opacity:0.9;/*其他，透明度90%*/
+}
+
+
+/*=================场景式服务===============*/
+.cjfwwrap {
+	width:186px;
+	height:201px;
+	background:url(../../images/llboa/cjfw_bg.png) no-repeat;
+	float:left;
+
+}
+
+.cjfw{ padding-top:98px;}
+.cjfw ul{ margin-left:3px;}
+.cjfw ul li{ width:54px; margin-left:4px; float:left;}
+.cjfw ul li a img{ width:54px; height:54px; }
+.cjfw ul li a img:hover{
+	filter:alpha(opacity=80); /*IE滤镜，透明度80%*/
+	-moz-opacity:0.8; /*Firefox私有，透明度80%*/
+	opacity:0.8;/*其他，透明度80%*/
+}
+.cjfw ul li p{ padding-top:5px; color:#838484;}
+
+/*=================办事指南，表格下载===============*/
+.bsbgwrap {
+	width:277px;
+	height:201px;
+	float:left;
+	background:url(../../images/llboa/bsbg_bg.png) no-repeat;
+}
+.bsbg{background:url(../../images/llboa/bsbg.png) no-repeat 0 23px; margin:8px 0 0 10px;}
+.bsbg_tab {
+	overflow:hidden;
+}
+.bsbg_tab ul li {
+	float:left;
+	margin-left:4px;
+	width:128px;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+}
+.bsbg_tab ul li.tab_off {
+	color:#666;
+	background:url(../../images/llboa/bsbg-taboff.png) no-repeat;
+}
+.bsbg_tab ul li.tab_off a {
+	color:#666;
+	font-weight:bold;
+}
+.bsbg_tab ul li.tab_on {
+	color:#a20a07;
+	background:url(../../images/llboa/bsbg-tabon.png) no-repeat;
+}
+.bsbg_tab ul li.tab_on a {
+	color:#a20a07;
+	font-weight:bold;
+}
+.bsbg_list {
+	margin:10px 10px 0;
+}
+.bsbg_list ul li {
+	line-height:24px;
+	text-align:left;
+	padding-left:15px;
+	background:url(../../images/llboa/dot.gif) no-repeat left center;
+}
+.bsbg_list a.more {
+	margin-top:5px;
+	display:block;
+	height:16px;
+	background:url(../../images/llboa/dots.png) no-repeat center center;
+	padding-left:102px;
+	text-align:left;
+	color:#a20a07;
+}
+
+
+.banner_gk{ width:220px;margin-top: 5px; float:left;}
+.right_gk{ float:left;width:220px;}
+.right_gk img{ width:220px; height:66px;}
+/***** New 2014-05-04 ******/
+.cjz_tab ul li {
+	float:left;
+	width:102px;
+	height:21px;
+	line-height:21px;
+	text-align:center;
+}
+.cjz_tab ul li.tab_off {
+	color:#666;
+	background:url(../../images/llboa/cjz_taboff.png) no-repeat;
+}
+.cjz_tab ul li.tab_off a {
+	color:#666;
+	font-weight:bold;
+}
+.cjz_tab ul li.tab_on {
+	color:#a20a07;
+	background:url(../../images/llboa/cjz_tabon.png) no-repeat;
+}
+.cjz_tab ul li.tab_on a {
+	color:#a20a07;
+	font-weight:bold;
+}
+.cjz_qg{margin:-2px 0 0 -33px;}

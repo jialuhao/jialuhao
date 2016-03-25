@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="BdSalary"
+		table="bd_salary"
+	> 
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<!-- please tell Joe Hudson that the type 'nchar' could not be resolved.. defaulting to java.lang.String -->
+		<property
+			name="Salarycode"
+			column="salarycode"
+			type="java.lang.String"
+			not-null="false"
+			length="50"
+		/>
+		<!-- please tell Joe Hudson that the type 'nchar' could not be resolved.. defaulting to java.lang.String -->
+		<property
+			name="Salaryname"
+			column="salaryname"
+			type="java.lang.String"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

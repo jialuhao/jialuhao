@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="Servicerecord"
+		table="servicerecord"
+	> 
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+		<!-- please tell Joe Hudson that the type 'nchar' could not be resolved.. defaulting to java.lang.String -->
+		
+		<!-- please tell Joe Hudson that the type 'nchar' could not be resolved.. defaulting to java.lang.String -->
+
+		
+	
+		<property
+			name="phone"
+			column="phone"
+			type="string"
+			
+		/>
+		<property
+			name="name"
+			column="name"
+			type="string"
+			
+		/>
+		<property
+			name="job"
+			column="job"
+			type="string"
+			
+		/>
+		<property
+			name="levels"
+			column="levels"
+			type="string"
+			
+		/>
+		<property
+			name="people"
+			column="people"
+			type="string"
+			
+		/>
+<property
+			name="serviceid"
+			column="serviceid"
+			type="string"
+			
+		/>
+		
+	</class>	
+</hibernate-mapping>

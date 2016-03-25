@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+	default-lazy-init="true">
+	<!--hibernate初始化-->
+
+	<bean id="propertyConfigure"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:config/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 
+		<bean id="configResource" class="org.springframework.core.io.FileSystemResource">
+		<constructor-arg type="java.lang.String"><value>jdbc.properties</value></constructor-arg>
+		</bean>
+	-->
+
+	<!-- Action Bean , 对应的部分 struts-config.xml form-bean and action-mappings -->
+	<!-- 
+		<bean name="/login" class="ui.action.LoginAction" scope="prototype">
+	-->
+	<!-- property是该bean的属性，如下面的property，在类LoginAction 中必有字段定义LoginService loginService;和getLoginService()以及setLoginService方法-->
+	<!--  
+		<property name="loginService">
+		<ref bean="loginService" />
+		</property> 
+		</bean> 
+	-->
+
+
+	<!--设定数据源-->
+	<bean id="dataSource"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="minPoolSize">
+			<value>10</value>
+		</property>
+		<property name="maxPoolSize">
+			<value>6000</value>
+		</property>
+		<property name="maxIdleTime">
+			<value>12000</value>
+		</property>
+		<property name="acquireIncrement">
+			<value>10</value>
+		</property>
+		<property name="maxStatements">
+			<value>0</value>
+		</property>
+		<property name="initialPoolSize">
+			<value>10</value>
+		</property>
+		<property name="idleConnectionTestPeriod">
+			<value>8000</value>
+		</property>
+		<property name="acquireRetryAttempts">
+			<value>30</value>
+		</property>
+		<property name="checkoutTimeout">
+			<value>30000</value>
+		</property>
+		<property name="breakAfterAcquireFailure">
+			<value>false</value>
+		</property>
+		<property name="testConnectionOnCheckout">
+			<value>false</value>
+		</property>
+		
+	</bean>
+
+
+	<!-- 配置sessionFactory, 为Hibernate配置属性  -->
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<!--  Hibernate的map 文件在这里配置了，注意文件的相对位置-->
+				<value>hibernate/ApplyJobInfo.hbm.xml</value>
+				<value>hibernate/BdCompkind.hbm.xml</value>
+				<value>hibernate/BdEducate.hbm.xml</value>
+				<value>hibernate/BdFunction.hbm.xml</value>
+				<value>hibernate/BdJob.hbm.xml</value>
+				<value>hibernate/BdPost.hbm.xml</value>
+				<value>hibernate/BdRole.hbm.xml</value>
+				<value>hibernate/BdTrade.hbm.xml</value>
+				<value>hibernate/CompInfo.hbm.xml</value>
+				<value>hibernate/CompResume.hbm.xml</value>
+				<value>hibernate/PersonResume.hbm.xml</value>
+				<value>hibernate/PersonResumeB.hbm.xml</value>
+				<value>hibernate/PublishJobInfo.hbm.xml</value>
+				<value>hibernate/RoleFunction.hbm.xml</value>
+				<value>hibernate/UserInfo.hbm.xml</value>
+				<value>hibernate/UserRole.hbm.xml</value>
+				<value>hibernate/ManaUser.hbm.xml</value>
+				<value>hibernate/CompBespeak.hbm.xml</value>
+				<value>hibernate/PersonMailInfo.hbm.xml</value>
+				<value>hibernate/BdPostRoot.hbm.xml</value>
+				<value>hibernate/PersonImage.hbm.xml</value>
+				<value>hibernate/compservice.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					${hibernate.dialect}
+				</prop>
+				<prop key="hibernate.show_sql">
+					${hibernate.show_sql}
+				</prop>
+				<prop key="hibernate.jdbc.batch_size">
+					${hibernate.jdbc.batch_size}
+				</prop>
+				<prop key="hibernate.cache.use_query_cache">
+					${hibernate.cache.use_query_cache}
+				</prop>
+				<prop key="hibernate.cache.provider_class">
+					${hibernate.cache.provider_class}
+				</prop>
+				<prop key="hibernate.connection.release_mode">
+					${hibernate.connection.release_mode}
+				</prop>
+				<prop key="hibernate.autoReconnect">
+					${hibernate.autoReconnect}
+				</prop>
+			</props>
+		</property>
+		<property name="lobHandler">
+			<ref local="DefaultLobHandler" />
+		</property>
+	</bean>
+
+	<!--对于大字段的处理-->
+	<bean id="DefaultLobHandler"
+		class="org.springframework.jdbc.support.lob.DefaultLobHandler"
+		lazy-init="true">
+	</bean>
+
+	<!-- 事务管理器,业务层的事务管理由该bean管理-->
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- 事务处理环境（代理）配置，为业务处理LoginService定义一个事务处理*****-->
+	<!-- 
+		<bean id="userDAOProxy" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager">
+		<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+		<props>
+		<prop key="save*">PROPAGATION_REQUIRED</prop>
+		<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+		<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+		</props>
+		</property>
+		<property name="proxyTargetClass">  
+		<value>true</value>  
+		</property> 
+		</bean>
+	-->
+
+	<!-- 配置事务拦截器 -->
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="query*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="pagination*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 定义beannameautoproxycreate 生成事务代理-->
+	<bean
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<!-- 指定对哪些bean name的bean 采用自动生成业务代理 -->
+		<property name="beanNames">
+			<!-- 下面是所有需要自动创建事务代理的bean -->
+			<list>
+				<value>inviteManager</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 业务逻辑处理Bean定义 -->
+	<bean id="inviteManager" class="service.InviteManagerImpl">
+
+		<property name="applyJobInfoDao">
+			<ref bean="applyJobInfoDAO" />
+		</property>
+		<property name="userInfoDao">
+			<ref bean="userInfoDAO" />
+		</property>
+		<property name="compInfoDao">
+			<ref bean="compInfoDAO" />
+		</property>
+		<property name="compResumeDao">
+			<ref bean="compResumeDAO" />
+		</property>
+		<property name="publishJobDao">
+			<ref bean="publishJobDAO" />
+		</property>
+		<property name="personResumeDao">
+			<ref bean="personResumeDAO" />
+		</property>
+		<property name="personResumeBDao">
+			<ref bean="personResumeBDAO" />
+		</property>
+		<property name="bdTradeDao">
+			<ref bean="bdTradeDAO" />
+		</property>
+		<property name="bdCompKindDao">
+			<ref bean="bdCompKindDAO" />
+		</property>
+		<property name="bdEducateDao">
+			<ref bean="bdEducateDAO" />
+		</property>
+		<property name="bdJobDao">
+			<ref bean="bdJobDAO" />
+		</property>
+		<property name="bdPostDao">
+			<ref bean="bdPostDAO" />
+		</property>
+		<property name="compBespeakDao">
+			<ref bean="compBespeakDAO" />
+		</property>
+		<property name="manaUserDao">
+			<ref bean="manaUserDAO" />
+		</property>
+		<property name="personMailInfoDao">
+			<ref bean="personMailInfoDAO" />
+		</property>
+		<property name="bdPostRootDao">
+			<ref bean="bdPostRootDAO"/>
+		</property>
+		<property name="personImageDao">
+			<ref bean="personImageDAO"/>
+		</property>
+	<property name="compserviceDao">
+			<ref bean="compserviceDAO" />
+		</property>
+	</bean>
+
+
+	<!--
+		<bean id="InviteService" parent="userDAOProxy"> 
+		<property name="target">
+		<ref local="inviteManager"/>
+		</property>
+		</bean>
+		
+		
+		<bean id="UserService" parent="userDAOProxy">  
+		<property name="target">  
+		<ref local="loginService" />  
+		</property>  
+		</bean> 
+	-->
+</beans>

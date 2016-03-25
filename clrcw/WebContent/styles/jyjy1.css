@@ -1,0 +1,220 @@
+/* 
+内容:教育就业频道模板样式
+作者: lqx66
+创建时间:2011.10.18
+ */
+div#main{width:953px; padding:6px 0 7px 7px; line-height:24px; background:#fff url(/clrcw/images/mainlistbg.jpg) repeat-x left top;}
+/* 公共样式 内容 */
+/* 残疾人艺术团,经典剧目 标题 */
+.tyysttitle{ background:url(/clrcw/images/whtytitle2.jpg) no-repeat left top; padding:6px 0 2px 21px; font-size:14px;}
+#content h3 {font-size:14px;}
+#content h3 a:link{color:#BD0401; text-decoration:none;}
+#content h3 a:visited{color:#BD0401; text-decoration:none;}
+#content h3 a:hover{color:#BD0401; text-decoration:underline;}
+#rightsidebar h3 a:link{color:#BD0401; text-decoration:none;}
+#rightsidebar h3 a:visited{color:#BD0401; text-decoration:none;}
+#rightsidebar h3 a:hover{color:#BD0401; text-decoration:underline;}
+/* 体育组织 公共样式*/
+h3.zpzstitle{padding:6px 0 2px 19px;}
+span.zpzsmore{ width:209px; display:block; text-align:right; margin-top:-27px; padding-right:23px;}
+ul.zpzslist{ float:left; padding:6px 9px 10px 2px}
+ul.zpzslist li{ float:left; font-size:0; line-height:0; padding-left:7px; padding-top:11px;}
+ul.zpzslist li img{width:100px; height:74px; display:block; padding:1px; border:1px #d3d3d3 solid;}
+/* 右侧更多公共样式 */
+.cgzsmore{width:200px; clear:both; display:block; text-align:right; background:url(/clrcw/images/jyjymore1.jpg) no-repeat center center; padding-right:20px; line-height:30px;}
+.mramtitle{width:207px; background:url(../images/jyjytitle3.jpg); font-size:14px;  padding:6px 0 2px 13px;}
+/* 
+左侧内容区域 
+*/
+#leftsidebar {width: 252px; float:left; display:inline;}
+#leftsidebar h3 {float: left; padding-bottom: 5px; font-size:0;} 
+#leftsidebar h3 img{width:252px; height:34px; display:block;}
+#ggxxbox{width:248px; border:#d3d3d3 solid 1px; padding:1px; float:left; color:#FFF; padding-bottom:10px;}
+/* 职业培训， 技能培训 */
+#pxbox{width:248px; position:relative; border:#d3d3d3 solid 1px; padding:1px; background:url(/clrcw/images/zwpd_left_01.jpg) repeat-x left top; float:left; color:#FFF; margin-top:8px;}
+#pxbox h4{position:absolute; top:5px; font-size:14px; width:80px; background:url(/clrcw/images/jyjytitle7.jpg) no-repeat left top; text-align:center;}
+#pxbox h4 a:link{color:#ffffff; text-decoration:none;}
+#pxbox h4 a:visited{color:#ffffff; text-decoration:none;}
+#pxbox h4 a:hover{color:#ffffff; text-decoration:underline;}
+#pxbox #zypxtitle{ left:6px;}
+#pxbox #jnpxtitle{ left:90px;}
+#pxbox div{ display:none;}
+#pxbox div .tzggmore{ margin-top:0;}
+#pxbox div .tzgglb{ padding-top:8px; padding-bottom:8px;}
+.zypxon h4#zypxtitle{ background:url(/clrcw/images/jyjytitle6.jpg) no-repeat left top;} 
+.zypxon h4#zypxtitle a:link{ color:#BA0804;}
+.zypxon h4#zypxtitle a:visited{ color:#BA0804;}
+.zypxon h4#zypxtitle a:hover{ color:#BA0804;}
+.zypxon div#zypxlist{ display:block; }
+.jnpxon h4#jnpxtitle{ background:url(/clrcw/images/jyjytitle6.jpg) no-repeat left top;}
+.jnpxon h4#jnpxtitle a:link{ color:#BA0804;}
+.jnpxon h4#jnpxtitle a:visited{ color:#BA0804;}
+.jnpxon h4#jnpxtitle a:hover{ color:#BA0804;}
+.jnpxon div#jnpxlist{ display:block; }
+#zyjnjdbox{width:248px; border:#d3d3d3 solid 1px; padding:1px; float:left; color:#FFF; margin-top:8px; padding-bottom:10px; }
+#cgzsbox{width:248px; border:#d3d3d3 solid 1px; padding:1px; float:left; color:#FFF; margin-top:8px; padding-bottom:43px;}
+#cgzsbox dl {width:102px; float:left;  padding:24px 0 0 14px;}
+#cgzsbox dl dt{ font-size:0; line-height:0;}
+#cgzsbox dl dt img{width:100px; height:74px; display:block; padding:1px; border:1px solid #B1B1B1;}
+#cgzsbox dl dd{ text-align:center;}
+/* 
+主内容区域 
+*/
+#content {width:466px; background:url(/clrcw/images/ctop.gif) repeat-x left top; float:left; display:inline; padding:10px 0 0 0; }
+/* 教育服务 */
+#jyfwbox{width:457px; float:left; display:inline; margin-left:7px; margin-top:1px; border:1px #d3d3d3 solid; border-top:1px solid #C71A20;}
+#jyfwbox .whzztitle{width:438px; background:url(/clrcw/images/jyjytitle2.jpg) no-repeat left top;}
+#jyfwbox .qttymore{ padding-right:10px; margin-right:10px;}
+#jyfwbox ul{ float:left; font-size:14px; line-height:32px; padding:7px 0 8px 6px;}
+#jyfwbox ul li{ float:left; width:144px; margin-right:5px; display:inline; padding:4px 0; text-align:center;  background:url(/clrcw/images/jyjybg1.jpg) no-repeat left center;}
+/* 就业服务 */
+#jyjybox{width:457px; float:left; display:inline; margin-left:7px; margin-top:9px; border:1px #d3d3d3 solid; border-top:1px solid #C71A20;}
+#jyjybox .whzztitle{width:438px; background:url(/clrcw/images/jyjytitle2.jpg) no-repeat left top;}
+#jyjybox .qttymore{ padding-right:10px; margin-right:10px;}
+#jyjybox ul{ float:left; font-size:14px; line-height:32px; padding:10px 0 12px 6px;}
+#jyjybox ul li{ float:left; width:108px;  margin-right:4px; display:inline; text-align:center; background:url(/clrcw/images/jyjybg2.jpg) no-repeat left top;}
+/* 残疾人就业保障金服务 */
+#cjrjybzj{width:457px; float:left; display:inline; margin-left:7px; margin-top:8px; border:1px #d3d3d3 solid; border-top:1px solid #C71A20;}
+#cjrjybzj h3{ background:url(/clrcw/images/jyjytitle8.jpg) no-repeat left top; padding:6px 0 8px 13px;}
+#cjrjybzj span{ width:443px; display:block; text-align:right; margin-top:-34px; padding-right:14px; letter-spacing:-1px;}
+#fwboxs{width:431px; margin:13px 10px 0 16px; background: url(/clrcw/images/jyjybg4.jpg) no-repeat left top; position:relative;}
+#fwboxs h4{ position:absolute; top:0; padding-top:1px; background:url(/clrcw/images/jyjytitle10.jpg) no-repeat left top; width:104px; text-align:center; font-size:14px;}
+#fwboxs div{ display:none; padding-top:34px;}
+#fwboxs div p{ text-indent:24px;}
+#fwboxs div ul{ float:left; padding:10px 0 10px 0;}
+#fwboxs div li{ float:left; background:url(/clrcw/images/jyjybg5.jpg) no-repeat left top; width:214px; padding:3px 0 5px 0; text-align:center;}
+#fwboxs #fwjjtitle{left:5px;}
+#fwboxs #fwzntitle{left:112px;} 
+.fwjjon h4#fwjjtitle{ background:url(/clrcw/images/jyjytitle9.jpg) no-repeat left top;}
+.fwjjon div#fwjjlist{ display:block;}
+.fwznon h4#fwzntitle{ background:url(/clrcw/images/jyjytitle9.jpg) no-repeat left top;}
+.fwznon div#fwznlist{ display:block;}
+/* 相关政策 */
+#xgzcbox{width:457px; float:left; display:inline; margin-left:7px; margin-top:8px; border:1px #d3d3d3 solid; }
+#xgzcbox .whzztitle{ background-image:url(/clrcw/images/jyjytitle4.jpg);}
+#xgzcbox .qttymore{ padding-right:10px; margin-right:10px;}
+#xgzcbox .qttylist{ padding-top:6px; padding-bottom:8px;}
+/* 扶贫开发，社会保障 */
+#fpbzbox{width:457px; position:relative; float:left; display:inline; margin-left:7px; margin-top:8px; border:1px #d3d3d3 solid; background:url(/clrcw/images/jyjytitle4.jpg) no-repeat left top;}
+#fpbzbox h3{position:absolute; top:0; padding-top:7px; background:url(/clrcw/images/jyjytitle12.jpg) no-repeat left bottom; width:104px; text-align:center; font-size:14px;}
+#fpbzbox h3 a:link{color:#4F4F4F; text-decoration:none;}
+#fpbzbox h3 a:visited{color:#4F4F4F; text-decoration:none;}
+#fpbzbox h3 a:hover{color:#4F4F4F; text-decoration:none;}
+#fpbzbox #fpkftitle{left:7px;}
+#fpbzbox #shbztitle{left:114px;}
+#fpbzbox div{display:none; padding-top:6px;}
+#fpbzbox div ul.qttylist{ padding-top:8px;}
+#fpbzbox div span.fpbzmore{width:437px; display:block; text-align:right; background:url(/clrcw/images/bszn_more_bg.gif) no-repeat right center;  padding-right:10px; margin-right:10px;}
+.fpkfon h3#fpkftitle{background:url(/clrcw/images/jyjytitle11.jpg) no-repeat left bottom;}
+.fpkfon h3#fpkftitle a:link{color:#A90D01;}
+.fpkfon h3#fpkftitle a:visited{color:#A90D01;}
+.fpkfon h3#fpkftitle a:hover{color:#A90D01;}
+.fpkfon div#fpkflist{ display:block;}
+.shbzon h3#shbztitle{background:url(/clrcw/images/jyjytitle11.jpg) no-repeat left bottom;}
+.shbzon h3#shbztitle a:link{color:#A90D01;}
+.shbzon h3#shbztitle a:visited{color:#A90D01;}
+.shbzon h3#shbztitle a:hover{color:#A90D01;}
+.shbzon div#shbzlist{ display:block;}
+#fpbzbox .qttymore{ padding-right:10px; margin-right:10px;}
+#fpbzbox .qttylist{ padding-top:6px; padding-bottom:12px;}
+
+
+/* 
+右侧内容区域 
+*/
+#rightsidebar{width:235px; float:right; display:inline; padding-top:11px; background:url(/clrcw/images/ctop.gif) repeat-x left top;}
+#rightsidebar li a:link{ color:#444444; text-decoration:none;}
+#rightsidebar li a:visited{ color:#444444; text-decoration:none;}
+#rightsidebar li a:hover{ color:#BF0508; text-decoration:none;}
+
+#rightsidebar span a:link{ color:#444444; text-decoration:none;}
+#rightsidebar span a:visited{ color:#444444; text-decoration:none;}
+#rightsidebar span a:hover{ color:#BF0508; text-decoration:none;}
+/* 残疾人特殊教育机构 */
+#cjrjyjg{width:220px; float:left; display:inline; margin-left:6px; padding-bottom:2px; border:1px #d3d3d3 solid; border-top:1px solid #C71A20;}
+#cjrjyjg .whzztitle{width:201px;}
+#cjrjyjg ul.tzgglb{width:206px; padding:10px 0 0 14px;}
+#cjrjyjg ul.tzgglb li{width:200px;}
+
+/* 市各区县残疾人就业服务中心 */
+#gqxclbox{width:220px; float:left; display:inline; margin-left:6px; margin-top:8px; border:1px #d3d3d3 solid;  border-top:1px solid #C71A20;}
+#gqxclbox ul.tzgglb{width:206px; padding:10px 0 0 14px;}
+#gqxclbox ul.tzgglb li{width:200px;}
+
+/* 盲人按摩指导中心 */
+#mrambox{width:220px; float:left; display:inline; margin-left:6px; margin-top:8px; padding-bottom:4px; border:1px #d3d3d3 solid; border-top:1px solid #C71A20;}
+#mrambox .qttymore{width:100px; padding-right:10px; margin-right:8px;}
+#mrambox ul.tzgglb{width:206px; padding:10px 0 0 14px;}
+#mrambox ul.tzgglb li{width:200px;}
+/* 优秀盲人按摩服务机构 */
+#yxmrbox{width:220px; float:left; display:inline; margin-left:6px; margin-top:8px;  padding-bottom:8px; border:1px #d3d3d3 solid; border-top:1px solid #C71A20;}
+#yxmrbox .qttymore{width:100px; padding-right:10px; margin-right:8px;}
+#yxmrbox ul.tzgglb{width:206px; padding:10px 0 0 14px;}
+#yxmrbox ul.tzgglb li{width:200px;}
+
+
+div#qzzpbox{width:945px; padding-right:8px; float:left; display:inline; background:url(/clrcw/images/jyjybg3.jpg) no-repeat left top; margin-top:10px;}
+div#qzzpbox h3{width:198px; font-size:14px; padding:12px 0 3px 20px; float:left; display:inline;}
+div#qzzpbox h4{ width:140px; font-size:14px; padding:10px 0 3px 0; float:left; display:inline;}
+div#qzzpbox h4 a:link{color:#691C00; text-decoration:none;}
+div#qzzpbox h4 a:visited{color:#691C00; text-decoration:none;}
+div#qzzpbox h4 a:hover{color:#691C00; text-decoration:underline;}
+#qzzpbox #dl{
+	width:570px;
+	float:left;
+	color:#691C00; 
+	display:inline;
+	padding-top:8px;
+	padding-left:8px;
+}
+#qzzpbox #dl label{
+	padding-left:8px;
+}
+#qzzpbox #dl .yhm{
+	width:97px;
+	height:18px;
+	line-height:18px;
+	border:#8b6d63 solid 1px;
+	color:#999;
+}
+
+#qzzpbox #dl .dl{
+	width:51px;
+	text-align:center;
+	line-height:19px;
+	height:19px;
+	border:none;
+	background:url(/clrcw/images/yh_02.jpg) no-repeat;
+	color:#6e1f00;
+	display:inline;
+}
+#qzzpbox #dl span{
+	width:120px;
+	padding-left:5px;
+}
+	
+#qzzpbox #dl span a{
+	color:#6e1f00;
+	text-decoration:underline;
+	padding-right:5px;
+	padding-left:5px;
+}
+#zpqzxxbox{width:953px; margin-top:6px; float:left;}
+#zpqzxxbox .zpxxcss{ width:468px; margin-right:6px; border:1px #d3d3d3 solid; float:left; display:inline; background:url(/clrcw/images/jyjytitle5.jpg) no-repeat left top;}
+#zpqzxxbox .zpxxcss h3{padding:9px 0 9px 20px;}
+#zpqzxxbox .zpxxcss span.zpinto{width:438px; display:block; text-align:right; padding-right:29px;_padding-right:19px; margin-top:-30px;}
+#zpqzxxbox .zpxxcss ul{ float:left; padding:10px 0 0 20px;}
+#zpqzxxbox .zpxxcss ul li{width:430px; float:left; padding:2px 0 1px 14px; line-height:18px; background:url(/clrcw/images/fwjglibg.jpg) no-repeat left center;}
+#zpqzxxbox .zpxx_add ul li{width:440px;}
+#zpqzxxbox .zpxxcss ul li span{ padding-right:8px; float:left; display:block;}
+#zpqzxxbox .zpxx_add ul li span{height:18px;overflow:hidden;}
+#zpqzxxbox .zpxxcss ul li span.sex{width:36px;}
+#zpqzxxbox .zpxxcss ul li span.job{width:80px;}
+#zpqzxxbox .zpmore{width:440px; clear:both; text-align:right; padding:2px 25px 1px 0; display:block; background:url(/clrcw/images/jyjymore2.jpg) no-repeat center center;}
+
+#zpqzxxbox .zpxxcss span.zpinto a:link{color:#592704; text-decoration:none;}
+#zpqzxxbox .zpxxcss span.zpinto a:visited{color:#592704; text-decoration:none;}
+#zpqzxxbox .zpxxcss span.zpinto a:hover{color:#592704; text-decoration:underline;}
+#zpqzxxbox .zpmore a:link{color:#B70C00; text-decoration:none;}
+#zpqzxxbox .zpmore a:visited{color:#B70C00; text-decoration:none;}
+#zpqzxxbox .zpmore a:hover{color:#B70C00; text-decoration:underline;}

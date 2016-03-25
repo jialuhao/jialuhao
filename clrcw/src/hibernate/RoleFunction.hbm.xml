@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="RoleFunction"
+		table="role_function"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="pk_role_function"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<many-to-one
+			name="Function"
+			column="function_id"
+			class="BdFunction"
+			not-null="true"
+		>
+		</many-to-one>
+		<many-to-one
+			name="Role"
+			column="role_id"
+			class="BdRole"
+			not-null="true"
+		>
+		</many-to-one>
+
+
+	</class>	
+</hibernate-mapping>

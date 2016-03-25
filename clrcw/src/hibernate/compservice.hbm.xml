@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="CompService"
+		table="comp_service"
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="pkjob"
+			column="pk_job"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="name"
+			column="name"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="number"
+			column="number"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="phone"
+			column="phone"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="losewhy"
+			column="losewhy"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="otherwhy"
+			column="otherwhy"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="house"
+			column="house"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="workname"
+			column="workname"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="remark"
+			column="remark"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

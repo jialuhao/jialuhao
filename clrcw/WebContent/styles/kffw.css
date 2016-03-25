@@ -1,0 +1,197 @@
+/* 
+内容:康复服务首页模板样式
+作者: lqx66
+创建时间:2011.10.12
+ */
+div#main{width:953px; padding:6px 0 7px 7px; line-height:24px; background:#fff url(../images/mainlistbg.jpg) repeat-x left top;}
+#leftsidebar {float: left; height: auto; width: 252px;}
+#leftsidebar h3 {float: left; padding-bottom: 5px; font-size:0;} 
+#leftsidebar h3 img{width:252px; height:34px; display:block;}
+#ggxxbox{width:248px; border:#d3d3d3 solid 1px; padding:1px; float:left; color:#FFF; margin-bottom:8px; padding-bottom:15px;}
+#shzdbox{width:248px; border:#d3d3d3 solid 1px; padding:1px; float:left; color:#FFF; margin-bottom:8px; padding-bottom:15px;}
+/* 主内容区域 */
+#content {width:700px; background:url(../images/ctop.gif) repeat-x; float:left; padding:10px 0 0 0;}
+#fwlcbox{ width:340px; float:left; display:inline; }
+#fwlcbox h3{width:319px;}
+#fwlcbox ul{width:318px;}
+#fwlcbox ul li{width:304px;}
+#fwhjbox{width:685px; border:1px #D6D6D6 solid; float:left; display:inline; margin:0 0 7px 7px; background:url(../images/fwhjtitle.jpg) no-repeat left top;}
+#fwhjbox div{ float:left; display:inline; width:31px; margin-right:14px;}
+#fwhjbox h3{
+	width:15px;
+	font-size:14px;
+	line-height:18px;
+	padding:21px 6px 0 10px;
+}
+#fwhjbox h3 a:link{color:#BD0401; text-decoration:none;}
+#fwhjbox h3 a:visited{color:#BD0401; text-decoration:none;}
+#fwhjbox h3 a:hover{color:#BD0401; text-decoration:underline;}
+#fwhjbox span{
+	width:15px;
+	display:block;
+	padding:25px 6px 8px 10px;
+	margin-bottom:8px;
+	line-height:14px;
+	background:url(../images/fwhjlibg.jpg) no-repeat center bottom;
+}
+#fwhjbox span a:link{color:#2F2F2F; text-decoration:none;}
+#fwhjbox span a:visited{color:#2F2F2F; text-decoration:none;}
+#fwhjbox span a:hover{color:#BD0304; text-decoration:none;}
+#fwhjbox dl{
+	width:144px;
+	float:left;
+	display:inline;
+	margin-right:14px;
+	border:1px solid #D6D6D6;
+	background:#E7E7E7;
+	text-align:center;
+	padding-bottom:6px;
+	margin-top:8px;
+}
+#fwhjbox dl dt{width:120px; padding:6px 12px 6px 12px; font-size:0; line-height:0;}
+#fwhjbox dl dt img{width:116px; height:88px; display:block; padding:2px;  background:url(../images/fwhjimg.jpg) no-repeat left top;}
+#fwhjbox dl dd{ line-height:18px;}
+/* #kfxlbox.css [康复服务] */
+
+#kfxlbox {
+	width:340px;
+	border:1px #D6D6D6 solid;
+	margin:0 0 0 7px;
+	_margin:0 0 0 4px;
+	position:relative;
+	float:left;
+	padding:0 0 10px 0;
+}
+
+/* h2.css */
+#kfxlbox h2 {
+	line-height:31px;
+	background:url(../images/kffwBj_2.jpg) no-repeat 0 0;
+	padding:0 0 5px 21px;
+	color:#BC0402;
+}
+#kfxlbox h2 a {
+	color:#BE0403;
+	font-size:14px;
+}
+#kfxlbox h2 a:hover {
+	text-decoration:underline;
+}
+/* dl.css */
+#kfxlbox div {
+	background:url(../images/kffwBj_4.jpg) repeat-y 141px 0;
+}
+#kfxlbox dl {
+	width:327px;
+	zoom:1;
+	overflow:hidden;
+	margin:0 0 0 5px;
+}
+#kfxlbox dl dt {
+	float:left;
+	width:138px;
+	line-height:39px;
+	text-align:center;
+}
+#kfxlbox dl dt a {
+	display:block;
+	background:url(../images/kffwBj_1.jpg) no-repeat 4px 0;
+	font-size:14px;
+}
+#kfxlbox .display a {
+	background:url(../images/kffwBj_3.jpg) no-repeat 0 0;
+	line-height:37px;
+	font-size:14px;
+}
+#kfxlbox .display dd {
+	display:block;
+}
+#kfxlbox dl dd {
+	width:153px;
+	border:2px #E2CCA7 solid;
+	border-left:none;
+	height:116px;
+	display:none;
+	position:absolute;
+	left:143px;
+	z-index:1;
+	line-height:23px;
+	padding:17px;
+	top:36px;
+}
+
+
+/* #jgdhbox.css */
+#jgdhbox {
+	border:1px #ddd solid;
+	width:250px; 
+	height:252px; 
+
+}
+#jgdhbox h3 {
+	background:url(../images/wlBj_1.jpg) no-repeat 1px 1px;
+	line-height:29px;
+	height:29px;
+	margin:0;
+	padding:0;
+	clear:both;
+	float:none;
+}
+#jgdhbox h3 a {
+	color:#FFF;
+	font-size:14px;
+	margin:0 0 0 18px;
+}
+#jgdhbox ul {
+	width:229px;
+	margin:10px auto 0 auto;
+}
+#jgdhbox ul li {
+	width:228px;
+}
+#jgdhbox ul .display ol {
+	display:block;
+}
+#jgdhbox ul .display ol li {
+	display:block;
+}
+#jgdhbox ul .display ol {
+	padding:5px 0 0 0;
+}
+#jgdhbox ul li ol {
+	display:none;
+}
+#jgdhbox ul li ol li {
+	display:block;
+	padding:0 0 0 10px;
+	width:206px;
+}
+#jgdhbox ul li ol li a {
+	
+}
+#jgdhbox ul #aa1 , #jgdhbox #aa2 {
+	display:block;
+	line-height:25px;
+	background:url(../images/wlBj_2.jpg) no-repeat 0 0;
+	color:#F00;
+	padding:2px 0 0 10px;
+	overflow:hidden;
+	width:223px;
+}
+#jgdhbox ul .display .more1 {
+	background:url(../images/wlBj_4.jpg) no-repeat 15px 8px;
+	zoom:1;
+	overflow:hidden;
+	padding:0 20px 0 0;
+}
+#jgdhbox ul .display .more1 a {
+	float:right;
+}
+#jgdhbox ul .display ol {
+	border:1px #E8D5B5 solid;
+	width:227px;
+	margin:0 auto;
+}
+#jgdhbox #aa2 {
+	background:url(../images/wlBj_3.jpg) no-repeat 0 0;
+}

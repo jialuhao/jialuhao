@@ -1,0 +1,72 @@
+@charset "gb2312";
+/* 
+
+*/
+html {
+	height:100%;
+}
+*{
+	margin:0;
+	padding:0;
+}
+div, table, th, td, tr, a, em, span, h1, h2, h3, h4, h5, h6, ul, li, ol, form, caption, img, p {
+	margin:0;
+	padding:0;
+	border:0;
+}
+ul li, ol li {
+	list-style-type:none;
+}
+a:link {
+	color:#000;
+	text-decoration:none;
+}
+a:visited {
+	color:#000;
+	text-decoration:none;
+}
+a:hover {
+	color:#be0404;
+	text-decoration:none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:12px;
+}
+body {
+	font-family:"ËÎÌו";
+	font-size:12px;
+	line-height:18px;
+	color:#000;
+	background:url(../images/top_bg.jpg) repeat-x top #1e101b;
+	text-align:center;
+}
+img {
+	border:none;
+}
+div#container {
+	margin:0px auto;
+	text-align:left;
+	width:960px;
+}
+.clearboth {
+	clear:both;
+	height:0px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+div#skip {
+	height:0px;
+	font-size:0px;
+	line-height:0px;
+}
+/* wlBj_on.css */
+.wlBj_on {
+	background:url(../images/top_bg.jpg) repeat-x 0 top #1e101b;
+}
+.wlBj_off {
+	background:url(../images/top_bg.jpg) repeat-x 0 top #1e101b;
+}
+i {
+	font-style:normal;
+}

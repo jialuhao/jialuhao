@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="Recommends"
+		table="recommends" 
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		
+		
+		<property
+			name="cardnumber"
+			column="cardnumber"
+			type="string"
+			not-null="false"
+			length="18"
+		/>
+		<property
+			name="company"
+			column="company"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+	
+		
+		<property
+			name="job"
+			column="job"
+			type="string"
+			not-null="false"
+			length="30"
+		/>
+		<property
+			name="commdpeople"
+			column="commdpeople"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+<property
+			name="serviceid"
+			column="serviceid"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+	</class>	
+</hibernate-mapping>

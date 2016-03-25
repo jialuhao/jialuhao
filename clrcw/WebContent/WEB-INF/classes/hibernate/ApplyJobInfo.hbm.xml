@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="ApplyJobInfo"
+		table="apply_job_info" 
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="pk_apply_job"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<version name="Version" column="version" type="short"/>
+		
+		<property
+			name="WorkYear"
+			column="work_year"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Salary"
+			column="salary"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+	
+		
+		<property
+			name="createTime"
+			column="createTime"
+			type="string"
+			not-null="false"
+		/>
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<property
+			name="refreshtime"
+			column="refreshtime"
+			type="string"
+			not-null="false"
+		/>
+	
+		<many-to-one
+			name="ResumeCode"
+			column="resume_code"
+			class="PersonResume"
+			not-null="true"
+		>
+		</many-to-one>
+		<many-to-one
+			name="JobCode"
+			column="job_code"
+			class="BdJob"
+			not-null="true"
+		>
+		</many-to-one>
+		<many-to-one
+			name="PostCode"
+			column="post_code"
+			class="BdTrade"
+			not-null="true"
+		>
+		</many-to-one>
+		<many-to-one
+			name="PersonCode"
+			column="person_code"
+			class="UserInfo"
+			not-null="true"
+		>
+		</many-to-one>
+
+
+	</class>	
+</hibernate-mapping>

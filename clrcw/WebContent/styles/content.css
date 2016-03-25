@@ -1,0 +1,42 @@
+/* 
+内容:内容页公共样式
+作者: lqx66
+创建时间:2011.10.20
+ */
+div#main{width:952px; padding:7px 0 6px 8px;}
+#breadcrumbnav{width:926px; float:left; padding-left:16px; border:1px solid #D3D3D3; display:inline; background:url(../images/wzlbbg1.jpg) repeat-x left top;}
+#breadcrumbnav #nowplace{ float:left;  display:block; color:#BE0403; padding:3px 0 0 15px; line-height:26px; background:url(../images/wzlbbg3.jpg) no-repeat left top;}
+#breadcrumbnav ol{ float:left; overflow:hidden; }
+#breadcrumbnav ol li{ float:left; padding:3px 16px 0px 16px; margin-left:-10px; line-height:26px; background:url(../images/wzlbbg2.jpg) no-repeat left top;}
+div#content{width:942px; border:1px solid #D8D8D8; float:left; display:inline; background:url(../images/wznrbg1.jpg) repeat-x left top; margin-top:8px;}
+
+#articlecontent{width:748px; text-align:center; padding:50px 97px 52px 97px;}
+#articlecontent h3{ font-size:16px; line-height:18px;}
+#articlecontent #onshow{background:#EBEBEB; line-height:24px; margin:20px 0;}
+#articlecontent #onshow span{ padding-right:20px;}
+#articlecontent p{ font-size:14px; text-align:left; text-indent:28px; line-height:24px;}
+#articlecontent img{width:450px; height:338px; display:block; margin:0 auto; padding:34px 0;}
+/* 音频内容页 */
+#wmabox{width:748px; text-align:center; padding:29px 0 0 0;}
+#wmabox a.ypnrlink{ display:block; width:72px; margin:0 auto; padding-top:1px; background:url(../images/ypnrbg1.jpg) no-repeat left center;  font-size:14px; text-align:center;}
+#wmabox #wmashow{width:710px; clear:both; border:1px solid #D7D2D2; background:#F3F2F2; font-size:12px; margin-top:45px; text-align:left; padding:24px 0 45px 36px;}
+#wmabox #wmashow p{ font-size:12px; line-height:48px; width:484px; text-indent:0;}
+#articlecontent #wmabox #wmashow div.xz {width:103px; float:left; text-align:center; padding-top:2px; display:inline; background:url(../images/ypnrbg2.jpg) no-repeat left center; margin-right:17px;}
+
+
+#zxdcbox{ width:747px; float:left; padding:56px 97px 0 98px; }
+#zxdcbox h3{ font-size:16px;}
+#zxdcform{ margin-top:19px; float:left;}
+#radios{ background:#F3F2F2; float:left; padding-bottom:4px;}
+#radios span{width:200px; display:block; float:left; padding-right:547px; font-size:14px;}
+#radios span label{ width:156px; float:right; line-height:20px; height:20px; padding:10px 0;}
+#radios span input{ width:44px; float:right; line-height:20px; height:20px; margin:9px 0; vertical-align:middle;}
+#buttons{ width:499px; float:left; text-align:center; padding-top:22px; padding-bottom:44px; padding-left:248px; }
+#buttons a{ float:left; background: url(../images/zxdcbg1.jpg) no-repeat left top; line-height:20px; width:64px; display:block; padding-top:2px; margin-right:50px;}
+#buttons input{ float:left;}
+#wthdbox{width:830px; float:left; font-size:14px; padding:56px 50px 110px 62px;}
+#wthdbox h3{width:830px; float:left; font-size:14px; padding-bottom:14px;}
+#wthdbox h3 span{width:64px; float:left; display:block; text-align:right; color:#BE0403;}
+#wthdbox dl{ float:left; line-height:26px; }
+#wthdbox dl dt{width:64px; float:left; text-align:right; color:#BE0403; font-weight:bold; height:auto;}
+#wthdbox dl dd{color:#565656; float:left; width:766px;}

@@ -1,0 +1,44 @@
+
+#header{width:1002px; background:url(../images/mainframe/quicklinkbg.jpg) repeat-x left top;}
+
+ul#quicklink{width:914px; float:left; display:inline; padding-left:30px;}
+ul#quicklink li{ float:left; display:inline; padding:6px 27px 5px 20px; background:url(../images/mainframe/dcqw.jpg) no-repeat left top;}
+ul#quicklink li.dcqw{ background:url(../images/mainframe/dcqdw.jpg) no-repeat left top;}
+ul#quicklink li.dczx{ background:url(../images/mainframe/dcqzx.jpg) no-repeat left top;}
+span#enlisbox{ float:right;display:block;padding:6px 10px 5px 6px; }
+span#enlisbox a:link{color:#A60100; text-decoration:none;}
+span#enlisbox a:visited{color:#A60100; text-decoration:none;}
+span#enlisbox a:hover{color:#A60100; text-decoration:underline;}
+h1#logo{width:1002px; clear:both; font-size:0;}
+h1#logo img{width:1002px; height:183px; display:block;}
+
+ul#mainnav{width:1002px; float:left; background:url(../images/mainframe/mainnavbg.jpg) no-repeat left top;}
+ul#mainnav li{width:128px; float:left; font-size:0; display:inline; padding:3px 8px 5px 5px;  text-align:center; background:url(../images/mainframe/navli.jpg) no-repeat right;}
+ul#mainnav li img{width:69px; height:27px; display:block; padding:0 30px 0 29px;}
+ul#mainnav li a{width:128px; display:block;}
+#container #header ul#mainnav li a.onnow{ background:url(../images/mainframe/navlibg.jpg) no-repeat left top;}
+ul#mainnav li.navlastli{ background:none;}
+#footer{width:1002px; clear:both;font-size:14px; line-height:30px; padding-bottom:64px; background:#000 url(../images/mainframe/footerbg.jpg) repeat-x left top;}
+
+ul#footlink{width:1002px;   text-align:center; padding-bottom:8px;}
+ul#footlink li{ display:inline; border-left:1px solid #fff; padding:0 6px 0 16px;}
+ul#footlink li.firstli{ border:none;}
+ul#footlink li a:link{color:#fff; text-decoration:none;}
+ul#footlink li a:visited{color:#fff; text-decoration:none;}
+ul#footlink li a:hover{color:#fff; text-decoration:underline;}
+.footline{width:1002px; text-align:center; padding-top:6px;}
+#container #header #quicklink  a:link {
+	color:#A60100; text-decoration:none;
+}
+#container #header #quicklink  a:visited {
+	color:#A60100; text-decoration:none;
+}
+#container #header #quicklink  a:hover {
+	color:#A60100; text-decoration:underline;
+}
+
+#breadcrumbnav{width:963px; float:left; padding-bottom:9px;}
+#breadcrumbnav dl{ float:left;}
+#breadcrumbnav dt{ float:left;}
+#breadcrumbnav dd{ float:left; background:url(../images/mainframe/breakbg.jpg) no-repeat left center; padding:0 10px 0 26px;}
+#breadcrumbnav dd.firstbreak{ background:none; padding-left:0;}

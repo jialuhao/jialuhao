@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?> 
+    	<menu>
+        	<menu name="个人管理">
+          		<menu name="用户管理" url="/clrcw/admin/findAllUserId.do?method=findAllUserId" target="body"></menu>
+          		<menu name="求职信息审核" url="/clrcw/admin/findAllapplyJob.do?method=findApplyJob"  target="body"></menu>
+          	    <menu name="代理求职" url="/clrcw/admin/aglientapply.do?method=aglientapply" target="body"></menu>
+          	</menu>
+        	<menu name="企业管理" url="/clrcw/admin/showAllCompany.do?method=showAllCompany" target="body">
+          		<menu name="资质审核" url="/clrcw/admin/showAllBespeak.do?method=showAllBespeak"  target="body"></menu>
+          		<menu name="招聘信息" url="/clrcw/admin/findAllpublishJob.do?method=findAllpublishJob"  target="body"></menu>
+          		<menu name="服务记录" url="/clrcw/admin/findAllpublishJob.do?method=findAllserviceJob"  target="body"></menu>
+        	    <menu name="代理招聘" url="/clrcw/admin/aglientpublish.do?method=aglientpublish"  target="body"></menu>
+        	</menu>
+        	<menu name="信息统计"  >
+          		<menu name="个人信息" url="/clrcw/admin/findAllUserId.do?method=findAllUserIdbymanage"  target="body"></menu>
+          		<menu name="企业信息" url="/clrcw/admin/listAllCompany.do?method=showAllCompany"  target="body"></menu>
+        	</menu>
+        	<!--menu name="用户手册" url="/clrcw/public/help/help.pdf"  target="helppdf"></menu-->
+        	<menu name="修改密码" url="/clrcw/pages/admin/modifyPassword.jsp"  target="body"></menu>
+        	<menu name="退出系统" url="/clrcw/admin/manaLogin.do?method=loginOut"  target="_parent"></menu>
+    	</menu>

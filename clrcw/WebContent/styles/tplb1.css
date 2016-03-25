@@ -1,0 +1,22 @@
+/* 
+内容:图片列表1列表模板样式
+作者: lqx66
+创建时间:2011.10.20
+ */
+div#main{width:951px; padding:7px 0 6px 9px;}
+#leftsidebar{ min-height:756px;}
+#content{width:686px; float:left; display:inline; margin-left:9px;}
+#content #breadcrumbnav{width:668px;}
+#content #qjzsbox{width:684px; float:left; border:1px #d3d3d3 solid; border-top:1px solid #C71A20; margin-top:5px; padding-bottom:40px;}
+#content #qjzsbox .lmlbtitle{ margin-bottom:6px;}
+
+#qjzsbox ul.qjzslist{ width:614px; overflow:hidden; padding-left:38px; float:left; display:inline;}
+#qjzsbox ul.qjzslist li{ width:614px; float:left; padding:10px 0 20px 0; display:inline; background:url(../images/wzlbbg6.jpg) repeat-x left bottom;}
+#qjzsbox dl{width:100px; float:left; display:inline; margin:0 13px 0 23px; padding:10px 7px 0 7px;}
+#qjzsbox dl dt{width:100px; font-size:0; line-height:0;  }
+#qjzsbox dl dt img{width:96px; height:125px; display:block; padding:1px; border:1px solid #cccccc;}
+#qjzsbox dl dd{ width:100px; text-align:center; margin-top:2px; background:#F1F1F1;}
+#qjzsbox dl dd a:link{color:#343434; text-align:none;}
+#qjzsbox dl dd a:visited{color:#343434; text-align:none;}
+#qjzsbox dl dd a:hover{color:#BD0700; text-align:none;}
+#content #qjzsbox #changepage{width:604px; padding-left:80px; float:left;  margin-top:25px; }

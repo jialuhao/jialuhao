@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="PublishJobInfo"
+		table="publish_job_info"
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="pk_job"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<version name="Version" column="version" type="short"/>
+		
+		<property
+			name="CompLoginId"
+			column="comp_login_id"
+			type="string"
+			not-null="true"
+			length="20"
+		/>
+		<property
+			name="JobAmount"
+			column="job_amount"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Grading"
+			column="grading"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<property
+			name="PublishTime"
+			column="publish_time"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="CloseTime"
+			column="close_time"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+			<property
+			name="validtime"
+			column="validtime"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="EngageSex"
+			column="engage_sex"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="AgeLimit"
+			column="age_limit"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="WorkYear"
+			column="work_year"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Salary"
+			column="salary"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="JobDesc"
+			column="job_desc"
+			type="string"
+			not-null="false"
+			length="500"
+		/>
+		<property
+			name="Status"
+			column="status"
+			type="string"
+			not-null="false"
+			length="10"
+		/>
+		
+		<property
+			name="Dr"
+			column="dr"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		
+		<property
+			name="Address"
+			column="address"
+			not-null="false"
+			type="string"
+			
+		/>
+		
+		<property
+			name="nature"
+			column="nature"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<property
+			name="validflag"
+			column="validflag"
+			type="string"
+			not-null="false"
+			length="1"
+		/>
+		<property
+			name="workarea"
+			column="workarea"
+			type="string"
+			not-null="false"
+			length="2"
+		/>
+		<property
+			name="welfare"
+			column="welfare"
+			type="string"
+			not-null="false"
+			length="500"
+		/>
+		<property
+			name="opinion"
+			column="opinion"
+			type="string"
+			not-null="false"
+			length="500"
+		/>
+		<many-to-one
+			name="Education"
+			column="education_id"
+			class="BdEducate"
+			not-null="true"
+		>
+		</many-to-one>
+		<many-to-one
+			name="PkComp"
+			column="pk_comp"
+			class="CompInfo"
+			not-null="true"
+		>
+		</many-to-one>
+		<many-to-one
+			name="Post"
+			column="post_id"
+			class="BdPost"
+			not-null="false"
+		>
+		</many-to-one>
+		<many-to-one
+			name="Job"
+			column="job_id"
+			class="BdJob"
+			not-null="true"
+		>
+		</many-to-one>
+
+		<set inverse="true" name="CompResumes">
+			<key column="pk_resume" />
+			<one-to-many class="CompResume" />
+		</set>
+
+		<set inverse="true" name="PersonMailInfos">
+			<key column="id" />
+			<one-to-many class="PersonMailInfo" />
+		</set>
+
+
+
+	</class>	
+</hibernate-mapping>
